@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+  All Dojos
+{% endblock title %}
+
+{% block content %}
+<h1>All Dojos</h1>
+<div class="row">
+  <div class="col">
+    {% include 'partials/_new_dojo.html' %}
+  </div>
+  <div class="col">
+    {% include 'partials/_list_dojos.html' %}
+  </div>
+</div>
+{% endblock content %}

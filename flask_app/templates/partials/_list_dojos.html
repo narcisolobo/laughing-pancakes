@@ -1,0 +1,19 @@
+<div class="card">
+  <h4 class="card-header">All Dojos</h4>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dojo in dojos %}
+          <tr>
+            <td>{{ dojo.name }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

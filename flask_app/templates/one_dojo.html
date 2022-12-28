@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+  Dojo Details
+{% endblock title %}
+
+{% block content %}
+<h1>Dojo Details:</h1>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <h4 class="card-header">{{ dojo.name }} Ninjas:</h4>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>First Name:</th>
+              <th>Last Name:</th>
+              <th>Age:</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ninja in dojo.ninjas %}
+              <tr>
+                <td>{{ ninja.first_name }}</td>
+                <td>{{ ninja.last_name }}</td>
+                <td>{{ ninja.age }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
